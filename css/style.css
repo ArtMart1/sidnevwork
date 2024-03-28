@@ -678,12 +678,13 @@ a{
     flex-direction: column;
     align-items: center;
     height: 268px;
-    transition: margin, opacity 1s;
+    transition: margin 1s;
 }
 .center{
     margin-top: 40vh !important;
     justify-content: center;
     transition: margin 1s;
+    transition: opacity 0s !important;
     margin-left: 40px !important;
 }
 .flute{
@@ -806,14 +807,14 @@ a{
     line-height: 28px;
 }
 .merch_item{
-    transition: margin, opacity 1s;
+    transition: margin 1s;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .middle{
-    transition: 1s;
+    transition: opacity 0s;
     margin-top: 40vh !important;
     margin-left: 26px !important;
 }
