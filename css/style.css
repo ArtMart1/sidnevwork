@@ -225,15 +225,22 @@ header{
 }
 #web_design{
     display: flex;
+    height: 100vh;
+    align-items: center;
 }
 .container{
     width: 441px; 
     padding-left: 60px;
-    padding-right: 60px;
-    margin-top:  21vh;
+    padding-right: 60px; 
     display: flex;
     flex-direction: column;
     transition: 1s;
+    
+}
+
+
+.indent{
+    margin-top: 16px;
 }
 .container.small{
     margin-top: 43vh;
@@ -411,6 +418,7 @@ header{
 .image_container{
     z-index: 801;
     transition-delay: 1s;
+    position: relative;
 }
 .up .container_bot{
     bottom: 0;
@@ -553,10 +561,21 @@ a{
 .title_icons{
     font-size: 24px;
 }
+.title_icons_small{
+    line-height: 28px;
+    font-size: 18px;
+    margin-top: 24px;
+}
 .more_icons{
     line-height: 28px;
     font-size: 18px;
     margin-top: 12px;
+    white-space: nowrap;
+}
+.gray{
+    color:  #515151;
+    margin-top: 16px;
+
 }
 .integral{
     width: 350px;
@@ -642,8 +661,11 @@ a{
     position: absolute;
     width: 100%;
      height: 100vh;
-    
+     transition: opacity 1ms;
   }
+ .fodler img .hidden{
+    transition: opacity 1ms;
+ } 
   .folder img{
     width: 15.5vw;
     
@@ -655,6 +677,7 @@ a{
     cursor: pointer;
     z-index: 3;
     transition: width 0.3s;
+    transition: opacity 0s;
     
   }
   .folder img:hover{
@@ -679,12 +702,13 @@ a{
     align-items: center;
     height: 268px;
     transition: margin 1s;
+    transition: opacity 1ms;
 }
 .center{
     margin-top: 40vh !important;
     justify-content: center;
     transition: margin 1s;
-    transition: opacity 0s !important;
+    transition: opacity 1ms !important;
     margin-left: 40px !important;
 }
 .flute{
@@ -803,18 +827,19 @@ a{
 }
 
 .text_merch{
-    word-wrap: break-word;
+    white-space: nowrap;
     line-height: 28px;
 }
 .merch_item{
     transition: margin 1s;
+    transition: opacity 1ms;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .middle{
-    transition: opacity 0s;
+    transition: opacity 1ms;
     margin-top: 40vh !important;
     margin-left: 26px !important;
 }
@@ -822,6 +847,7 @@ a{
     height: 268px !important;
     width: auto !important;
     max-width: none !important;
+    transition: opacity 1ms;
 }
 .merch_item .container_bot{
     color: #515151;
@@ -990,9 +1016,10 @@ a{
 }
 #commercial{
     display: flex;
+    align-items: center;
 }
 .about_rooms{
-    margin-top: 21vh;
+    
     max-width: 540px;
     margin-left: 88px;
     color: #515151;
@@ -1016,7 +1043,7 @@ a{
 .flute_room{
     display: flex;
     margin-left: 168px;
-    margin-top: 23vh;
+   
 }
 .flute_room img{
     max-width: 892px;
@@ -1030,7 +1057,6 @@ a{
 }
 .apartment{
     margin-left: 101px;
-    margin-top: 21.6vh;
     padding-right: 70px;
     display: flex;
 }
@@ -1292,7 +1318,7 @@ a{
         line-height: 20px;
     }
     .container{
-        margin-top: 24vh;
+       
         width: 352px;
         height: 450px;
     }

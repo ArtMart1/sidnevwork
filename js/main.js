@@ -520,11 +520,11 @@ document.querySelectorAll('#but_foot').forEach(function(button) {
     if (!isSmall) {
       firstCardElement.style.paddingLeft = '53px';
       firstCardElement.style.paddingRight = '6px';
-      button.textContent = 'Scatter on the table';
+      button.textContent = 'Scatter on ';
     } else {
       firstCardElement.style.paddingLeft = '120px';
       firstCardElement.style.paddingRight = '60px';
-      button.textContent = 'Tidy up the table';
+      button.textContent = 'Tidy up';
     }
 
     isSmall = !isSmall;
