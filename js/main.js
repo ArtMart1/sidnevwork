@@ -443,7 +443,8 @@ document.querySelectorAll('#but_foot').forEach(function(button) {
     let folders = document.querySelectorAll('.folder');
     let wrappers = document.querySelectorAll('.wrapper');
     let logotipElements = document.querySelectorAll('.logotip');
-    let merchElements = document.querySelectorAll('.merch_item')
+    let merchElements = document.querySelectorAll('.merch_item');
+    let liContainers = document.querySelectorAll('.li_container');
     containerBotElements.forEach(function(containerBotElement) {
       if (!isSmall) {
         containerBotElement.classList.add('hidden');
@@ -507,7 +508,15 @@ document.querySelectorAll('#but_foot').forEach(function(button) {
           container.classList.remove('big'); 
       }
     });
-
+    
+    liContainers.forEach(function(liContainer){
+      if(!isSmall){
+        liContainer.style.marginTop = '40vh';
+      } else{
+        liContainer.style.marginTop = '0';
+      }
+    })
+    
     lineContainers.forEach(function(lineContainer) {
       if (!isSmall) {
         lineContainer.classList.remove('fadeInDelayed');
@@ -719,3 +728,4 @@ let aboutMerch = document.querySelector('.about_merch');
   } else{
     aboutMerch.classList.remove('margin')
   }
+
