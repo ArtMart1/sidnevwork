@@ -727,5 +727,5 @@ let aboutMerch = document.querySelector('.about_merch');
     aboutMerch.classList.add('margin')
   } else{
     aboutMerch.classList.remove('margin')
-  }
+  };
 

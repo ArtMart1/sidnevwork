@@ -62,8 +62,19 @@ body {
   video {
     width: 1280px;
     height: 720px;
-    
   }
+.minecraft::after{
+    content: '';
+    position: fixed;
+    height: 100%;
+    width: 20vw;
+    right: 0;
+    z-index: 99999;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect width="10" height="10" fill="#000"/><rect x="10" y="10" width="10" height="10" fill="#000"/><rect x="10" y="0" width="10" height="10" fill="#fff"/><rect x="0" y="10" width="10" height="10" fill="#fff"/></svg>'); /* SVG-изображение пикселей */
+    background-size: 20px 20px; /* Размер одного пикселя */
+    filter: grayscale(100%) blur(100px); /* Применяем эффект пиксельности */
+}
+
   .hidden{
     opacity: 0;
     transition: opacity 1s;
@@ -450,7 +461,7 @@ header{
 }
 .image_container{
     z-index: 801;
-    transition-delay: 1s;
+    transition: 1ms;
     position: relative;
 }
 .up .container_bot{
@@ -693,15 +704,14 @@ a{
     position: absolute;
     width: 100%;
      height: 100vh;
-     transition: opacity 1ms;
+     transition: 1ms;
   }
- .fodler img .hidden{
-    transition: opacity 1ms;
+ .fodler.hidden{
+    transition: 1ms;
+    z-index: 9999;
  } 
   .folder img{
-    width: 15.5vw;
-    
-    
+    width: 10vw;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -713,7 +723,7 @@ a{
     
   }
   .folder img:hover{
-    width: 16vw;
+    width: 10.5vw;
     transition: width 0.3s;
   }
 
@@ -860,7 +870,8 @@ a{
 
 .text_merch{
     white-space: nowrap;
-    line-height: 28px;
+    line-height: 20px;
+    font-size: 14px;
 }
 .merch_item{
     transition: margin 1s;
@@ -1253,13 +1264,7 @@ a{
     font-size: 20px;
     line-height: 24px;
    }
-   .mobile p{
-    margin-top: 40px;
-    color: #FE7819;
-    font-weight: 700;
-    line-height: 17px;
-    font-size: 14px;
-   }
+   
 }
 @media (min-width: 360px) {
     .mobile img{
@@ -1270,10 +1275,7 @@ a{
      font-size: 20px;
      line-height: 24px;
     }
-    .mobile p{
-     margin-top: 40px;
-     font-size: 14px;
-    }
+    
  }
  @media (min-width: 480px) {
     .mobile span{
@@ -1281,10 +1283,7 @@ a{
      font-size: 24px;
      line-height: 24px;
     }
-    .mobile p{
-     margin-top: 44px;
-     font-size: 18px;
-    }
+   
  }
  @media (min-width: 600px) {
     .mobile span{
@@ -1292,20 +1291,12 @@ a{
      font-size: 28px;
      line-height: 32px;
     }
-    .mobile p{
-     margin-top: 48px;
-     font-size: 22px;
-    }
  }
  @media (min-width: 760px) {
     .mobile span{
      margin-top: 54px;
      font-size: 36px;
      line-height: 36px;
-    }
-    .mobile p{
-     margin-top: 52px;
-     font-size: 26px;
     }
  }
  @media (min-width: 1680px) {
@@ -1401,7 +1392,7 @@ a{
     }
     .more_icons{
         font-size: 14px;
-        line-height: 24px;
+        line-height: 20px;
     }
     .flute_room img{
         height: 432px;
@@ -1424,6 +1415,7 @@ a{
     }
     .text_merch{
         font-size: 12px;
+        line-height: 17px;
     }
     .merch_item .container_bot{
         margin-top: 12px;
