@@ -832,11 +832,12 @@ a{
     position: relative;
 }
 .wrapper{
-    transition: 1s;
+    transition: 1ms;
     display: flex;
 }
 .wrapper.hidden{
     width: 100vw;
+    transition: 1ms;
 }
 .about_merch{
     margin-top: 26.5vh;
@@ -1082,6 +1083,7 @@ a{
     word-wrap: break-word;
     line-height: 28px;
     margin-top: 12px;
+    font-size: 14px;
 }
 .flute_room{
     display: flex;

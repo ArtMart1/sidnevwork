@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const triangle = curtain.querySelector('.triangle');
     const circle = curtain.querySelector('.circle');
     let isDragging = false;
+
     function updatePositionAndImages(position) {
       const containerWidth = lightImage.parentElement.offsetWidth;
       let newPosition = position;
@@ -19,21 +20,34 @@ document.addEventListener('DOMContentLoaded', function () {
       triangle.style.left = `${newPosition}px`;
       circle.style.left = `${newPosition}px`;
     }
+
     updatePositionAndImages(150);
+
     line.addEventListener('mousedown', function (event) {
       event.preventDefault();
       isDragging = true;
+
+      // При нажатии на ползунок, добавляем слушатель событий mousemove только к текущему ползунку
+      curtain.addEventListener('mousemove', mouseMoveHandler);
     });
-    document.addEventListener('mousemove', function (event) {
-      if (!isDragging) return;
-      updatePositionAndImages(event.clientX - lightImage.parentElement.getBoundingClientRect().left);
-    });
-    document.addEventListener('mouseup', function () {
+
+    // Событие mouseup теперь слушается только на текущем ползунке
+    line.addEventListener('mouseup', function () {
       if (!isDragging) return;
       isDragging = false;
+      
+      // Удаляем слушатель событий mousemove, когда отпускается кнопка мыши
+      curtain.removeEventListener('mousemove', mouseMoveHandler);
     });
+
+    // Функция для обработки события mousemove
+    function mouseMoveHandler(event) {
+      if (!isDragging) return;
+      updatePositionAndImages(event.clientX - lightImage.parentElement.getBoundingClientRect().left);
+    }
   });
 });
+
 
 var scrolledRight = false;
 
