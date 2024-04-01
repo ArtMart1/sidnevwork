@@ -743,3 +743,43 @@ let aboutMerch = document.querySelector('.about_merch');
     aboutMerch.classList.remove('margin')
   };
 
+  var container = document.querySelector('.main_container');
+  var isScrolling = false;
+  var startX, scrollLeft;
+  var velocity = 0;
+  var lastScrollTime = 0;
+  var friction = 0.95; // Коэффициент трения, определяющий скорость затухания скорости прокрутки
+  
+  container.addEventListener('touchstart', function(event) {
+      isScrolling = true;
+      startX = event.touches[0].pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+  });
+  
+  container.addEventListener('touchmove', function(event) {
+      if (!isScrolling) return;
+      var x = event.touches[0].pageX - container.offsetLeft;
+      var walk = (x - startX);
+      container.scrollLeft = scrollLeft - walk;
+  });
+  
+  container.addEventListener('touchend', function() {
+      isScrolling = false;
+      velocity = (container.scrollLeft - scrollLeft) / (Date.now() - lastScrollTime);
+  });
+  
+  container.addEventListener('touchcancel', function() {
+      isScrolling = false;
+  });
+  
+  function scrollWithInertia() {
+      if (!isScrolling && Math.abs(velocity) > 0.1) {
+          velocity *= friction;
+          container.scrollLeft += velocity;
+      }
+      lastScrollTime = Date.now();
+      requestAnimationFrame(scrollWithInertia);
+  }
+  
+  requestAnimationFrame(scrollWithInertia);
+  

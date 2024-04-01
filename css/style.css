@@ -29,6 +29,7 @@ body {
     user-select: none; 
     height: 100%;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 #progress{
     position: absolute;
@@ -97,6 +98,7 @@ body {
     display: flex;
     overflow-x: hidden;
     overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 li{
@@ -142,7 +144,7 @@ header{
 .header_center li{
     margin: 0 4px;
     line-height: 42px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
 }
 .pixel{
@@ -202,7 +204,7 @@ header{
 
 .border a{
     color: #000 !important;
-    font-weight: 500;
+    font-weight: 300;
 }
 .nav-link a{
     padding: 0 7px;
@@ -228,11 +230,18 @@ header{
     font-weight: 300;
 }
 .header_right a{
-    color: #8a8a8a;
+    color: #000;
+    font-weight: 16px;
+    display: flex;
+    align-items: center;
 }
 .header_right a:hover{
-    color: #000 !important;
-    transition: 0.2s;
+    color: #8a8a8a !important;
+    transition: 0.4s;
+}
+.header_right a:hover  .text_me{
+    stroke: #8a8a8a;
+    transition: 0.3s;
 }
 #web_design{
     display: flex;
@@ -628,9 +637,11 @@ a{
     margin-right: 108px;
     transition: opacity 1s;
 }
+
 .icon{
     position: relative;
-    width: 1172px;
+    width: 82vw;
+    max-width: 1172px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -641,8 +652,8 @@ a{
 }
 .icon img{
     position: absolute;
-    min-width: 1172px;
-    height: 478px;
+    width: 82vw;
+    max-width: 1172px;
     left: 0;
     transition: opacity .3s;
 }
@@ -1080,8 +1091,8 @@ a{
 }
 .text_rooms{
     width: 540px;
-    word-wrap: break-word;
-    line-height: 28px;
+    white-space: nowrap;
+    line-height: 20px;
     margin-top: 12px;
     font-size: 14px;
 }
@@ -1128,25 +1139,25 @@ a{
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    border: 1px solid #8a8a8a;
+    border: 1px solid #000;
     background: none;
     border-radius: 8px;
     font-family: "Inter", sans-serif;
-    color: #8a8a8a;
+    color: #000;
     font-size: 18px;
     padding: 8px 12px;
     transition: 0.3s;
 }
 .but_foot {
     position: fixed;
-    border-color: #8a8a8a;
-    color: #8a8a8a;
+    border-color: #000;
+    color: #000;
 }
 .but_foot::before, .but_foot::after {
     position: absolute;
     top: 0;
     left: 0;
-    border-color: #000;
+    border-color: #8a8a8a;
     border-radius: 8px;
     border-style: solid;
     transition: all 0.35s;
@@ -1164,8 +1175,8 @@ a{
     border-width: 0 1px 0 1px;
 }
 .but_foot:hover {
-    border-color: #000;
-    color: #000;
+    border-color: #8a8a8a;
+    color: #8a8a8a;
 }
 .but_foot:hover::before {
     width: 100%;
@@ -1181,11 +1192,11 @@ a{
     right: 44px;
     cursor: pointer;
     
-    border: 1px solid #8a8a8a;
+    border: 1px solid #000;
     background: none;
     border-radius: 8px;
     font-family: "Inter", sans-serif;
-    color: #8a8a8a;
+    color: #000;
     font-size: 18px;
     padding: 8px 12px;
     display: inline-flex;
@@ -1197,14 +1208,14 @@ a{
     margin-right: 13px;
 }
 .notion {
-    border-color: #8a8a8a;
-    color: #8a8a8a;
+    border-color: #000;
+    color: #000;
 }
 .notion::before, .notion::after {
     position: absolute;
     top: 0;
     left: 0;
-    border-color: #000;
+    border-color: #8a8a8a;
     border-radius: 8px;
     border-style: solid;
     transition: all 0.35s;
@@ -1222,8 +1233,8 @@ a{
     border-width: 0 1px 0 1px;
 }
 .notion:hover {
-    border-color: #000;
-    color: #000;
+    border-color: #8a8a8a;
+    color: #8a8a8a;
 }
 .notion:hover::before {
     width: 100%;
@@ -1238,7 +1249,7 @@ a{
     transition:  0.3s;
 }
 .notion:hover  path{
-    fill: #000 !important;
+    fill: #8a8a8a !important;
     transition:  0.3s;
 }
 @media (max-width: 1000px) {
@@ -1303,16 +1314,16 @@ a{
  }
  @media (min-width: 1680px) {
     .nav-link a{
-        font-size: 22px;
+        font-size: 18px;
     }
     .header_right a{
-        font-size: 22px;
+        font-size: 18px;
     }
     #but_foot{
-        font-size: 22px;
+        font-size: 18px;
     }
     .notion{
-        font-size: 22px;
+        font-size: 18px;
     }
  }
  @media (max-width: 1440px) {
@@ -1325,6 +1336,10 @@ a{
     }
     .header_right a{
         font-size: 14px;
+    }
+    .header_right svg{
+        width: 20px;
+        height: 20px;
     }
     #but_foot{
         font-size: 14px;
@@ -1387,7 +1402,7 @@ a{
         display: none;
     }
     .slider_container{
-        margin-top: 80vh;
+        margin-top: 70vh;
     }
     .title_icons{
         font-size: 20px;
