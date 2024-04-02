@@ -543,11 +543,11 @@ document.querySelectorAll('#but_foot').forEach(function(button) {
     if (!isSmall) {
       firstCardElement.style.paddingLeft = '53px';
       firstCardElement.style.paddingRight = '6px';
-      button.textContent = 'Scatter on ';
+      
     } else {
       firstCardElement.style.paddingLeft = '120px';
       firstCardElement.style.paddingRight = '60px';
-      button.textContent = 'Tidy up';
+      
     }
 
     isSmall = !isSmall;
@@ -735,6 +735,22 @@ scrollContainer.addEventListener('wheel', (evt) => {
   evt.preventDefault();
   scrollContainer.scrollLeft += evt.deltaY; 
 });
+document.addEventListener('DOMContentLoaded', function() {
+  var mainContainer = document.querySelector('.main_container');
+  
+  // Обработчик события прокрутки страницы
+  window.addEventListener('wheel', function(event) {
+    if (mainContainer) {
+      // Проверяем, что горизонтальная прокрутка необходима
+      if (event.deltaY === 0 && Math.abs(event.deltaX) > 0) {
+        // Отменяем прокрутку по умолчанию
+        event.preventDefault();
+        // Прокручиваем main_container горизонтально
+        mainContainer.scrollLeft += event.deltaX;
+      }
+    }
+  });
+});
 
 let aboutMerch = document.querySelector('.about_merch');
   if(!isSmall){
@@ -783,3 +799,16 @@ let aboutMerch = document.querySelector('.about_merch');
   
   requestAnimationFrame(scrollWithInertia);
   
+
+  document.getElementById("but_foot").addEventListener("click", function() {
+    var smallTree = document.querySelector("#but_foot .small_tree");
+    var bigTree = document.querySelector("#but_foot .big_tree");
+    
+    if (smallTree.classList.contains("active")) {
+        smallTree.classList.remove("active");
+        bigTree.classList.add("active");
+    } else {
+        smallTree.classList.add("active");
+        bigTree.classList.remove("active");
+    }
+});
