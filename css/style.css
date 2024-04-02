@@ -1400,6 +1400,10 @@ a{
         width: 352px;
         line-height: 20px;
     }
+    .logotip .container_bot{
+        font-size: 14px;
+        margin-top: 40px;
+    }
     .line-container{
         display: none;
     }
@@ -1434,10 +1438,11 @@ a{
     }
     .text_merch{
         font-size: 12px;
-        line-height: 17px;
+        line-height: 14px;
     }
     .merch_item .container_bot{
         margin-top: 12px;
+        font-size: 12px;
     }
     .b_title_rooms{
         font-size: 20px;
@@ -1474,5 +1479,223 @@ a{
     }
     .alpha_API{
         height: 496px;
+    }
+ }
+ @media (max-height: 750px){
+    .nav-link a{
+        font-size: 14px;
+        padding: 0 4px;
+    }
+    .header_center li{
+        line-height: 32px;
+    }
+    .header_right a{
+        font-size: 14px;
+    }
+    .header_right svg{
+        width: 20px;
+        height: 20px;
+    }
+    #but_foot{
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    .notion{
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    .notion svg{
+        width: 26px; 
+        height: 24px;
+    }
+    .about{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .titles_left p{
+        font-size: 14px;
+    }
+    .titles_right{
+        font-size: 14px;
+    }
+    .visit{
+        font-size: 12px;
+        border-radius: 6px;
+        padding: 3px 5px;
+    }
+    .border{
+        border-radius: 6px;
+    }
+    .container{
+       
+        width: 352px;
+        
+    }
+    .card.large{
+        width: 352px;
+        height: 212px;
+    }
+    .container.big{
+        margin-top: -3vh;
+        width: 352px;
+    }
+    .down .image_container{
+        margin-top: 220px;
+    }
+    .card{width: 352px;
+        height: 220px;
+    }
+    .container_bot{
+        width: 352px;
+        line-height: 20px;
+    }
+    .hid{
+        width: 352px;
+        line-height: 20px;
+    }
+    .line-container{
+        display: none;
+    }
+    .slider_container{
+        margin-top: 76vh;
+    }
+    .title_icons{
+        font-size: 20px;
+    }
+    .more_icons{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .T-cacao img{
+        width: 18vw;
+    }
+    .T-flute{
+        margin-top: 52vh;
+    }
+    .T-flute img{
+        width: 22vw;
+    }
+    .T-dk{
+        margin-top: 48vh;
+    }
+    .T-dk img{
+        width: 16vw;
+        
+    }
+    .flute-dk{
+        margin-top: 18vh;
+    }
+    .dk_all{
+        margin-top: 40vh;
+        margin-left: 2vw;
+    }
+    .dk_all img{
+        width: 20vw;
+    }
+    .dk_all_back img{
+        width: 22vw;
+    }
+    .flower{
+        margin-left: 4vw;
+    }
+    .shopper{
+        margin-top: 55vh;
+        margin-left: 10vw;
+    }
+    .shopper img{
+        width: 18vw;
+    }
+    .flute_balls{
+        margin-left: 4vw;
+    }
+    .vtulka{
+        margin-left: 3vw;
+        margin-top: 54vh;
+    }
+    .pine_desk img{
+        width: 23vw;
+    }
+    .pattern img{
+        width: 12vw;
+    }
+    .poster{
+        margin-top: 13vh;
+    }
+    .pattern_bag{
+        margin-top: 50vh;
+    }
+    .pattern_bag img{
+        width: 24vw;
+    }
+    .flute_room img{
+        height: 432px;
+        width: 714px;
+    }
+    .apartment img{
+        height: 432px;
+    }
+    .triptych{
+        margin-left: -30vw;
+    }
+  
+    .b_title_merch{
+        font-size: 24px;
+    }
+    .title_merch{
+        font-size: 24px;
+    }
+    .text_merch{
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .merch_item .container_bot{
+        margin-top: 12px;
+    }
+    .b_title_rooms{
+        font-size: 20px;
+    }
+    .title_rooms{
+        font-size: 14px;
+    }
+    .text_rooms{
+        font-size: 14px;
+    }
+    .edof{
+        height: 386px;
+    }
+    .alphadoc{
+        height: 366px;
+    }
+    .pine{
+        height: 444px;
+    }
+    .martyanov{
+        height: 408px;
+    }
+    .flute_site{
+        height: 420px;
+    }
+    .edof_portal{
+        height: 396px;
+    }
+    .alphadoc_portal{
+        height: 396px;
+    }
+    .iris{
+        height: 388px;
+    }
+    .alpha_API{
+        height: 436px;
+    }
+    .title_icons{
+        font-size: 14px;
+    }
+    .logotip .container_bot{
+        font-size: 14px;
+        margin-top: 40px;
+    }
+    .more_icons{
+        font-size: 12px;
+        line-height: 14px;
     }
  }
