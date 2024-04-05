@@ -1584,6 +1584,7 @@ a{
     }
     .flute-dk{
         margin-top: 18vh;
+        margin-left: -2vw;
     }
     .dk_all{
         margin-top: 40vh;
@@ -1687,6 +1688,9 @@ a{
     .alpha_API{
         height: 436px;
     }
+    .li_container{
+        height: 444px;
+    }
     .title_icons{
         font-size: 14px;
     }
@@ -1697,5 +1701,14 @@ a{
     .more_icons{
         font-size: 12px;
         line-height: 14px;
+    }
+    
+    .text_rooms{
+        font-size: 12px;
+    }.title_rooms{
+        font-style: 12px;
+    }
+    .b_title_rooms{
+        font-size: 14px;
     }
  }
