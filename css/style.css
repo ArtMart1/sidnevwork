@@ -757,6 +757,14 @@ a{
     transition: opacity 1ms !important;
     margin-left: 40px !important;
 }
+.GSB{
+    width: 20wv;
+    margin-top: 58vh;
+    margin-left: 88px;
+}
+.GSB img{
+    width: 18vw;
+}
 .flute{
     
     width: 24vw;
